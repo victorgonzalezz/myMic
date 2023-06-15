@@ -1,6 +1,22 @@
 import { useState } from "react";
 import "./index.css";
 
+const sectorOptions = [
+  { id: "alojamiento", label: "Alojamientos" },
+  { id: "apoyo", label: "Servicios administrativos y de apoyo" },
+  { id: "artes", label: "Artes, Entretenimiento y Recreación" },
+  { id: "construccion", label: "Construcción" },
+  { id: "educativos", label: "Servicios Educativos" },
+  { id: "finanzas", label: "Finanzas y Seguros" },
+  { id: "alimentos", label: "Servicios de Alimentos y Bebidas" },
+  { id: "salud", label: "Cuidado de la Salud" },
+  { id: "informaction", label: "Información" },
+  { id: "gestion", label: "Gestión de Empresas" },
+  { id: "fabricacion", label: "Fabricación" },
+  { id: "imobiliaria", label: "Imobiliaria" },
+  { id: "alquiler", label: "Alquiler y Leasing" },
+];
+
 
 export function Home() {
   const [activeTab, setActiveTab] = useState("sector");
@@ -33,15 +49,17 @@ export function Home() {
 
         <li className="nav-item" role="presentation">
           <button
-            className={`nav-link ${activeTab === "profile" ? "active" : ""}`}
-            id="pills-profile-tab"
+            className={`nav-link ${
+              activeTab === "tipo-empresa" ? "active" : ""
+            }`}
+            id="pills-tipo-empresa-tab"
             data-bs-toggle="pill"
-            data-bs-target="#pills-profile"
+            data-bs-target="#pills-tipo-empresa"
             type="button"
             role="tab"
-            aria-controls="pills-profile"
-            aria-selected={activeTab === "profile"}
-            onClick={() => handleTabClick("profile")}
+            aria-controls="pills-tipo-empresa"
+            aria-selected={activeTab === "tipo-empresa"}
+            onClick={() => handleTabClick("tipo-empresa")}
           >
             Tipo de empresa
           </button>
@@ -64,110 +82,29 @@ export function Home() {
             ¿Cuál de los siguintes sectores describe mejor su tipo de negócio?
           </p>
           <div className="radio__container">
-            <div>
-              <input
-                type="radio"
-                id="alojamiento"
-                name="drone"
-                value="alojamiento"
-                onChange={""}
-              />
-              <label for="alojamiento">Alojamientos</label>
-            </div>
-
-            <div>
-              <input type="radio" id="apoyo" name="drone" value="apoyo" />
-              <label for="apoyo">Servicios administrativos y de apoyo</label>
-            </div>
-
-            <div>
-              <input type="radio" id="artes" name="drone" value="artes" />
-              <label for="artes">Artes, Entretenimiento y Recreación</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="construccion"
-                name="drone"
-                value="construccion"
-              />
-              <label for="construccion">Construcción</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="educativos"
-                name="drone"
-                value="educativos"
-              />
-              <label for="educativos">Servicios Educativos</label>
-            </div>
-            <div>
-              <input type="radio" id="finanzas" name="drone" value="finanzas" />
-              <label for="finanzas">Finanzas y Seguros</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="alimentos"
-                name="drone"
-                value="alimentos"
-              />
-              <label for="alimentos">Servicios de Alimentos y Bebidas</label>
-            </div>
-            <div>
-              <input type="radio" id="salud" name="drone" value="salud" />
-              <label htmlFor="salud">Cuidado de la Salud</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="informaction"
-                name="drone"
-                value="informaction"
-              />
-              <label htmlFor="informaction">Información</label>
-            </div>
-            <div>
-              <input type="radio" id="gestion" name="drone" value="gestion" />
-              <label htmlFor="gestion">Gestión de Empresas</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="fabricacion"
-                name="drone"
-                value="fabricacion"
-              />
-              <label for="fabricacion">Fabricación</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="imobiliaria"
-                name="drone"
-                value="imobiliaria"
-              />
-              <label for="imobiliaria">Imobiliaria</label>
-            </div>
-            <div>
-              <input type="radio" id="alquiler" name="drone" value="alquiler" />
-              <label for="alquiler">Alquiler y Leasing</label>
-            </div>
+            {sectorOptions.map((option) => (
+              <div key={option.id}>
+                <input
+                  type="radio"
+                  id={option.id}
+                  name="drone"
+                  value={option.id}
+                  // onChange={handleRadioChange}
+                />
+                <label className="radio__container-label" htmlFor={option.id}>{option.label}</label>
+              </div>
+            ))}
           </div>
         </div>
-
         <div
           className={`tab-pane fade show ${
-            activeTab === "profile" ? "active" : ""
+            activeTab === "tipo-empresa" ? "active" : ""
           }`}
-          id="pills-profile"
+          id="pills-tipo-empresa"
           role="tabpanel"
-          aria-labelledby="pills-profile-tab"
+          aria-labelledby="pills-tipo-empresa-tab"
         >
-          <p>
-            ¿Cuál tipo de negócio usted describe su empresa?
-          </p>
+          <p>¿Cuál tipo de negócio usted describe su empresa?</p>
         </div>
       </div>
     </>
