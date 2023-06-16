@@ -1,9 +1,9 @@
-import { Post } from './Post'
 import 'bootstrap/dist/css/bootstrap.css'
 
-import "./global.css"
 import { Header } from './components/Header'
 import { Home } from './components/Home';
+
+import "./global.css"
 
 function App() {
 
