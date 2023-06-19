@@ -19,7 +19,7 @@ const sectorOptions = [
 export function SectorComponent({ activeTab, handleRadioChange, selectedSector }) {
   return (
     <div
-      className={`tab-pane fade show ${activeTab === "sector" ? "active" : ""}`}
+      className={`tab-pane fade show ${activeTab === "Sector" ? "active" : ""}`}
       id="pills-sector"
       role="tabpanel"
       aria-labelledby="pills-sector-tab"
@@ -30,6 +30,7 @@ export function SectorComponent({ activeTab, handleRadioChange, selectedSector }
         {sectorOptions.map((option) => (
           <div key={option.id}>
             <input
+              className=""
               type="radio"
               id={option.id}
               name="drone"

@@ -2,10 +2,10 @@ import { useState } from "react";
 import { SectorComponent } from "../SectorComponent/index";
 import { TipoDeEmpresa } from "../TipoDeEmpresa/index";
 
-  
+import './index.css'  
 
 export function Sector() {
-  const [activeTab, setActiveTab] = useState("sector");
+  const [activeTab, setActiveTab] = useState("Sector");
   const [selectedSector, setSelectedSector] = useState("");
 
   const handleTabClick = (tab) => {
@@ -44,7 +44,9 @@ export function Sector() {
           {tabs.map(({ label }) => (
             <button
               key={label}
-              className={`nav-link ${activeTab === label ? "active" : ""}`}
+              className={`nav-link active ${
+                activeTab === label ? "active" : ""
+              } ${activeTab === label ? "custom-active" : ""}`}
               id={`pills-${label.toLowerCase().replace(" ", "-")}-tab`}
               data-bs-toggle="pill"
               data-bs-target={`#pills-${label.toLowerCase().replace(
