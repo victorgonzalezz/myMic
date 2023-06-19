@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SectorComponent } from "../SectorComponent/index";
 import { TipoDeEmpresa } from "../TipoDeEmpresa/index";
+import { Espacio } from "../Espacio";
 
 import './index.css'  
 
@@ -30,6 +31,10 @@ export function Sector() {
     {
       label: "Tipo de empresa",
       component: <TipoDeEmpresa activeTab={activeTab} />,
+    },
+    {
+      label: "Espacio",
+      component: <Espacio activeTab={activeTab} />,
     },
   ];
 

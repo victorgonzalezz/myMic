@@ -1,7 +1,7 @@
 .radio__container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .radio__container div {
@@ -12,4 +12,24 @@
 
 .radio__container input[type="radio"] {
   margin-right: 10px;
+}
+
+.home__button {
+  display: flex;
+  justify-content: center;
+  margin-left: -5rem;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 40%;
+  margin-left: 16rem;
+  width: 80px;
+}
+
+hr {
+  width: 40%;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-left: 16rem;
 }
