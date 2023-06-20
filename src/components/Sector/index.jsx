@@ -5,14 +5,12 @@ import { Espacio } from "../Espacio";
 
 import './index.css'  
 
-export function Sector() {
-  const [activeTab, setActiveTab] = useState("Sector");
+// eslint-disable-next-line react/prop-types
+export function Sector({ activeTab, handleTabClick }) {
+  
   const [selectedSector, setSelectedSector] = useState("");
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
+  
   const handleRadioChange = (event) => {
     setSelectedSector(event.target.value);
   };
@@ -37,7 +35,7 @@ export function Sector() {
       component: <Espacio activeTab={activeTab} />,
     },
   ];
-
+  // console.log(handleTabClick, 'oi');
   return (
     <>
       <ul
