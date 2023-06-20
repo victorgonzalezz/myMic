@@ -2,6 +2,9 @@ import { useState } from "react";
 import { SectorComponent } from "../SectorComponent/index";
 import { TipoDeEmpresa } from "../TipoDeEmpresa/index";
 import { Espacio } from "../Espacio";
+import { Personas } from "../Personas";
+import { Productos } from "../Productos";
+import { Resultados } from "../Resultados";
 
 import './index.css'  
 
@@ -34,8 +37,19 @@ export function Sector({ activeTab, handleTabClick }) {
       label: "Espacio",
       component: <Espacio activeTab={activeTab} />,
     },
+    {
+      label: "Personas",
+      component: <Personas activeTab={activeTab} />,
+    },
+    {
+      label: "Productos",
+      component: <Productos activeTab={activeTab} />,
+    },
+    {
+      label: "Resultados",
+      component: <Resultados activeTab={activeTab} />,
+    },
   ];
-  // console.log(handleTabClick, 'oi');
   return (
     <>
       <ul
