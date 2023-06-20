@@ -53,7 +53,7 @@ export function Sector({ activeTab, handleTabClick }) {
   return (
     <>
       <ul
-        className="nav nav-pills d-flex justify-content-center col-sm-8 mb-3"
+        className="nav nav-pills d-flex justify-content-center col-sm-12 mb-2"
         id="pills-tab"
         role="tablist"
       >
@@ -84,7 +84,7 @@ export function Sector({ activeTab, handleTabClick }) {
       </ul>
 
       <div
-        className="tab-content d-flex justify-content-center col-sm-10 m-2"
+        className="tab-content d-flex justify-content-center col-sm-10 m-4"
         id="pills-tabContent"
       >
         {tabs.map(({ label, component }) => (

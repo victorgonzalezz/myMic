@@ -17,14 +17,14 @@
 .home__button {
   display: flex;
   justify-content: space-between;
-  margin-left: 16rem;
+  margin-left: 19rem;
   margin-right: 16rem;
   margin-bottom: 10px;
 }
 
 #siguiente__button {
   width: 40%;
-  margin-right: 15.4rem;
+  margin-right: 3.4rem;
   width: 80px;
 }
 
@@ -35,8 +35,8 @@
 
 
 hr {
-  width: 40%;
+  width: 51%;
   border: 1px solid gray;
   border-radius: 3px;
-  margin-left: 16rem;
+  margin-left: 19.2rem;
 }
