@@ -15,10 +15,12 @@ export function Home({handleTabClick, activeTab}) {
     <>
       <Sector activeTab={activeTab} handleTabClick={handleTabClick} />
       <hr />
+  
       <div className="home__button">
+        <button id="volver__button">Volver</button>
         <button
-          id="button"
-          className={`button ${activeTab === "Home" ? "active" : ""}`}
+          id="siguiente__button"
+          className={`${activeTab === "Home" ? "active" : ""}`}
           onClick={handleNextTab}
         >
           Seguiente

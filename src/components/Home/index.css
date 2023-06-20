@@ -16,16 +16,23 @@
 
 .home__button {
   display: flex;
-  justify-content: center;
-  margin-left: -5rem;
+  justify-content: space-between;
+  margin-left: 16rem;
+  margin-right: 16rem;
   margin-bottom: 10px;
 }
 
-#button {
+#siguiente__button {
   width: 40%;
-  margin-left: 16rem;
+  margin-right: 15.4rem;
   width: 80px;
 }
+
+#volver__button {
+  width: 40%;
+  width: 80px;
+}
+
 
 hr {
   width: 40%;
