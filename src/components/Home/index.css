@@ -1,3 +1,8 @@
+.container {
+  display: grid;
+  place-content: center;
+}
+
 .radio__container {
   display: flex;
   flex-direction: column;
@@ -17,26 +22,23 @@
 .home__button {
   display: flex;
   justify-content: space-between;
-  margin-left: 19rem;
-  margin-right: 16rem;
-  margin-bottom: 10px;
+  margin: auto;
+  margin-top: 10px;
+  width: 633px;
 }
 
-#siguiente__button {
-  width: 40%;
-  margin-right: 3.4rem;
-  width: 80px;
+.custon__hr {
+  width: 633px;
+  margin: 0 auto;
+  margin-top: 10px
 }
 
+#siguiente__button,
 #volver__button {
-  width: 40%;
   width: 80px;
 }
-
 
 hr {
-  width: 51%;
   border: 1px solid gray;
   border-radius: 3px;
-  margin-left: 19.2rem;
 }

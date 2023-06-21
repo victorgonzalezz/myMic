@@ -34,8 +34,8 @@ export function Home({ handleTabClick, activeTab }) {
   return (
     <>
       <Sector activeTab={activeTab} handleTabClick={handleTabClick} />
-      <hr />
-
+      
+        <hr className="custon__hr"/>
       <div className="home__button">
         <button
           id="volver__button"
@@ -45,6 +45,7 @@ export function Home({ handleTabClick, activeTab }) {
         >
           Volver
         </button>
+
         <button
           id="siguiente__button"
           className={`${activeTab === "Resultados" ? "disabled" : ""}`}
