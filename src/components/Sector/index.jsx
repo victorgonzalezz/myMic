@@ -52,10 +52,11 @@ export function Sector({ activeTab, handleTabClick }) {
   ];
   return (
     <>
-      <ul
-        className="nav nav-pills d-flex justify-content-center col-sm-12 mb-2"
-        id="pills-tab"
-        role="tablist"
+      <div className="mt-5">
+           <ul
+            className="nav nav-pills d-flex justify-content-center col-sm-12 mb-2"
+            id="pills-tab"
+            role="tablist"
       >
         <li className="nav-item d-flex" role="presentation">
           {tabs.map(({ label }) => (
@@ -82,7 +83,6 @@ export function Sector({ activeTab, handleTabClick }) {
           ))}
         </li>
       </ul>
-
       <div
         className="tab-content d-flex justify-content-center col-sm-10 m-4"
         id="pills-tabContent"
@@ -104,7 +104,9 @@ export function Sector({ activeTab, handleTabClick }) {
             {component}
           </div>
         ))}
+      </div> 
       </div>
+  
     </>
   );
 }
