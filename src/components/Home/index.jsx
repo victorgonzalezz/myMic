@@ -1,9 +1,8 @@
-import { Sector } from "../Sector";
-import "./index.css";
+import { Sector } from "../Sector"
+import "./index.css"
 
 // eslint-disable-next-line react/prop-types
 export function Home({ handleTabClick, activeTab }) {
-  
   const handleNextTab = () => {
     if (activeTab === "Sector") {
       handleTabClick("Tipo de empresa");
@@ -40,15 +39,18 @@ export function Home({ handleTabClick, activeTab }) {
       <div className="home__button">
         <button
           id="volver__button"
-          className={`${activeTab === "Home" ? "active" : ""}`}
+          className={`${activeTab === "Sector" ? "disabled" : ""}`}
           onClick={handlePrevTab}
+          disabled={activeTab === "Sector"}
         >
           Volver
         </button>
         <button
           id="siguiente__button"
-          className={`${activeTab === "Home" ? "active" : ""}`}
+          className={`${activeTab === "Resultados" ? "disabled" : ""}`}
           onClick={handleNextTab}
+          disabled={activeTab === "Resultados"}
+
         >
           Seguiente
         </button>
