@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css'
+import { useState } from 'react';
 
 import { Header } from './components/Header'
-import { Home } from './components/Home';
+import { Home } from '../src/pages/Home';
 
 import "./global.css"
-import { useState } from 'react';
 
 function App() {
   const [activeTab, setActiveTab] = useState("Sector");

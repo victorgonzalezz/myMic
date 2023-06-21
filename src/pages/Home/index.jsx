@@ -1,4 +1,4 @@
-import { Sector } from "../Sector"
+import { Sector } from "../../components/Sector"
 import "./index.css"
 
 // eslint-disable-next-line react/prop-types
@@ -34,7 +34,6 @@ export function Home({ handleTabClick, activeTab }) {
   return (
     <>
       <Sector activeTab={activeTab} handleTabClick={handleTabClick} />
-      
         <hr className="custon__hr"/>
       <div className="home__button">
         <button
