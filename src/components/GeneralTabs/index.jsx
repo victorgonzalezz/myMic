@@ -9,7 +9,7 @@ import { Resultados } from "../Resultados";
 import './index.css'  
 
 // eslint-disable-next-line react/prop-types
-export function Sector({ activeTab, handleTabClick }) {
+export function GeneralTabs({ activeTab, handleTabClick }) {
   
   const [selectedSector, setSelectedSector] = useState("");
 

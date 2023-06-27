@@ -1,10 +1,10 @@
-import { Sector } from "../../components/Sector"
+import { GeneralTabs } from "../../components/GeneralTabs"
 import "./index.css"
 
 // eslint-disable-next-line react/prop-types
 export function Home({ handleTabClick, activeTab }) {
   const handleNextTab = () => {
-    if (activeTab === "Sector") {
+    if (activeTab === "GeneralTabs") {
       handleTabClick("Tipo de empresa");
     } else if (activeTab === "Tipo de empresa") {
       handleTabClick("Espacio");
@@ -26,20 +26,20 @@ export function Home({ handleTabClick, activeTab }) {
     } else if (activeTab === "Espacio") {
       handleTabClick("Tipo de empresa");
     } else if (activeTab === "Tipo de empresa") {
-      handleTabClick("Sector");
+      handleTabClick("GeneralTabs");
     }
   };
 
  
   return (
     <>
-      <Sector activeTab={activeTab} handleTabClick={handleTabClick} />
+      <GeneralTabs activeTab={activeTab} handleTabClick={handleTabClick} />
         <hr className="custon__hr"/>
       <div className="home__button">
         <button
           id="volver__button"
           onClick={handlePrevTab}
-          disabled={activeTab === "Sector"}
+          disabled={activeTab === "GeneralTabs"}
         >
           Volver
         </button>
