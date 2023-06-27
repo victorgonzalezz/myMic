@@ -1,0 +1,170 @@
+{
+  "tabs": [
+    {
+      "tab1": {
+        "label": "Sector",
+        "content": [
+          {
+            "question": "¿Cuál de los siguientes sectores describe mejor su tipo de negocio?",
+            "answers": [
+              {
+                "id": "1",
+                "text": "Alojamientos"
+              },
+              {
+                "id": "2",
+                "text": "Servicios administrativos y de apoyo"
+              },
+              {
+                "id": "3",
+                "text": "Artes, Entretenimiento y Recreación"
+              },
+              {
+                "id": "4",
+                "text": "Construcción"
+              },
+              {
+                "id": "5",
+                "text": "Servicios Educativos"
+              },
+              {
+                "id": "6",
+                "text": "Finanzas y Seguros"
+              },
+              {
+                "id": "7",
+                "text": "Servicios de Alimentos y Bebidas"
+              },
+              {
+                "id": "8",
+                "text": "Cuidado de la Salud"
+              },
+              {
+                "id": "9",
+                "text": "Información"
+              },
+              {
+                "id": "10",
+                "text": "Gestión de Empresas"
+              },
+              {
+                "id": "11",
+                "text": "Fabricación"
+              },
+              {
+                "id": "12",
+                "text": "Inmobiliaria"
+              },
+              {
+                "id": "13",
+                "text": "Alquiler y Leasing"
+              }
+            ]
+          }
+        ]
+      },
+      "tab2": {
+        "label": "Tipo de empresa",
+        "content": [
+          {
+            "question": "¿Cuál tipo de negocio describe su empresa?",
+            "answers": [
+              {
+                "id": "1",
+                "text": "Buena"
+              },
+              {
+                "id": "2",
+                "text": "Muy Buena"
+              },
+              {
+                "id": "3",
+                "text": "Excelente"
+              }
+            ]
+          }
+        ]
+      },
+      "tab3": {
+        "label": "Espacio",
+        "content": [
+          {
+            "question": "¿Como te gustaria tener tu espacio?",
+            "answers": [
+              {
+                "id": "1",
+                "text": "Pequeño"
+              },
+              {
+                "id": "2",
+                "text": "Medio"
+              },
+              {
+                "id": "3",
+                "text": "Grande"
+              }
+            ]
+          }
+        ]
+      },
+      "tab4": {
+        "label": "Personas",
+        "content": [
+          {
+            "question": "¿Con quantas personas te gustaria estar?",
+            "answers": [
+              {
+                "id": "1",
+                "text": "Poca gente"
+              },
+              {
+                "id": "2",
+                "text": "Alguna gente"
+              },
+              {
+                "id": "3",
+                "text": "Mucha gente"
+              }
+            ]
+          }
+        ]
+      },
+      "tab5": {
+        "label": "Productos",
+        "content": [
+          {
+            "question": "¿Como te gustaria tener tus productos?",
+            "answers": [
+              {
+                "id": "1",
+                "text": "Sofisticados"
+              },
+              {
+                "id": "2",
+                "text": "Modernos"
+              },
+              {
+                "id": "3",
+                "text": "Antiguos con agregado valor"
+              }
+            ]
+          }
+        ]
+      },
+      "tab6": {
+        "label": "Resultados",
+        "content": [
+          {
+            "answer": [
+              {
+                "id": "1",
+                "text": "Aqui tenemos los resultados"
+              }
+              
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
