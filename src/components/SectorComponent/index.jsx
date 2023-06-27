@@ -16,10 +16,10 @@ const sectorOptions = [
 ];
 
 // eslint-disable-next-line react/prop-types
-export function SectorComponent({ activeTab, handleRadioChange, selectedSector }) {
+export function SectorComponent({ handleRadioChange, selectedSector }) {
   return (
     <div
-      className={`tab-pane fade show ${activeTab === "Sector" ? "active" : ""}`}
+      className={`tab-pane fade show`}
       id="pills-sector"
       role="tabpanel"
       aria-labelledby="pills-sector-tab"

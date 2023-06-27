@@ -38,7 +38,6 @@ export function Home({ handleTabClick, activeTab }) {
       <div className="home__button">
         <button
           id="volver__button"
-          className={`${activeTab === "Sector" ? "disabled" : ""}`}
           onClick={handlePrevTab}
           disabled={activeTab === "Sector"}
         >
@@ -47,7 +46,7 @@ export function Home({ handleTabClick, activeTab }) {
 
         <button
           id="siguiente__button"
-          className={`${activeTab === "Resultados" ? "disabled" : ""}`}
+          className="disabled"
           onClick={handleNextTab}
           disabled={activeTab === "Resultados"}
 

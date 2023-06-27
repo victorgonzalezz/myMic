@@ -1,10 +1,7 @@
-// eslint-disable-next-line react/prop-types
-export function Resultados({ activeTab }) {
+export function Resultados() {
   return (
     <div
-      className={`tab-pane fade show ${
-        activeTab === "resultados" ? "active" : ""
-      }`}
+      className={`tab-pane fade show`}
       id="pills-resultados"
       role="tabpanel"
       aria-labelledby="pills-resultados-tab"
