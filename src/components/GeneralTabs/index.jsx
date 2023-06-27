@@ -6,11 +6,11 @@ import { Personas } from "../Personas";
 import { Productos } from "../Productos";
 import { Resultados } from "../Resultados";
 
+import data from '../../data.json' 
 import './index.css'  
 
 // eslint-disable-next-line react/prop-types
 export function GeneralTabs({ activeTab, handleTabClick }) {
-  
   const [selectedSector, setSelectedSector] = useState("");
 
   
@@ -26,12 +26,18 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
           activeTab={activeTab}
           handleRadioChange={handleRadioChange}
           selectedSector={selectedSector}
+         
         />
       ),
     },
     {
       label: "Tipo de empresa",
-      component: <TipoDeEmpresa activeTab={activeTab} />,
+      component:
+        <TipoDeEmpresa
+          activeTab={activeTab}
+          question={data.tabs[0].tab2.content[0].question}
+          answer={data.tabs[0].tab2.content[0].answer}
+        />,
     },
     {
       label: "Espacio",

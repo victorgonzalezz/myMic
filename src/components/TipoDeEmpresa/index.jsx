@@ -1,4 +1,4 @@
-export function TipoDeEmpresa() {
+export function TipoDeEmpresa({question, answer}) {
   return (
     <div
       className={`tab-pane fade show`}
@@ -6,24 +6,27 @@ export function TipoDeEmpresa() {
       role="tabpanel"
       aria-labelledby="pills-tipo-empresa-tab"
     >
-      <p>¿Cuál tipo de negocio describe su empresa?</p>
+      <p>{question}</p>
       <fieldset>
-        <div>
-          <input type="radio" id="huey" name="drone" value="huey"
-                checked />
-          <label for="huey">Buena</label>
-        </div>
-
-        <div>
-          <input type="radio" id="dewey" name="drone" value="dewey" />
-          <label for="dewey">Muy Buena</label>
-        </div>
-
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie" />
-          <label for="louie">Excelente</label>
-        </div>
+        {answer.map(({ id, text }) => (
+          <div key={id}>
+            <input
+              type="radio"
+              id={id}
+              name="drone"
+              value={text}
+              checked
+            />
+            <label htmlFor={id}>{text}</label>
+          </div>
+        ))}
       </fieldset>
     </div>
   );
 }
+
+      // <div>
+      //   <input type="radio" id="huey" name="drone" value="huey"
+      //         checked />
+      //   <label for="huey">Huey</label>
+      // </div>

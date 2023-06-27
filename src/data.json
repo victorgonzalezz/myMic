@@ -6,7 +6,7 @@
         "content": [
           {
             "question": "¿Cuál de los siguientes sectores describe mejor su tipo de negocio?",
-            "answers": [
+            "answer": [
               {
                 "id": "1",
                 "text": "Alojamientos"
@@ -68,7 +68,7 @@
         "content": [
           {
             "question": "¿Cuál tipo de negocio describe su empresa?",
-            "answers": [
+            "answer": [
               {
                 "id": "1",
                 "text": "Buena"
@@ -90,7 +90,7 @@
         "content": [
           {
             "question": "¿Como te gustaria tener tu espacio?",
-            "answers": [
+            "answer": [
               {
                 "id": "1",
                 "text": "Pequeño"
@@ -112,7 +112,7 @@
         "content": [
           {
             "question": "¿Con quantas personas te gustaria estar?",
-            "answers": [
+            "answer": [
               {
                 "id": "1",
                 "text": "Poca gente"
@@ -134,7 +134,7 @@
         "content": [
           {
             "question": "¿Como te gustaria tener tus productos?",
-            "answers": [
+            "answer": [
               {
                 "id": "1",
                 "text": "Sofisticados"
