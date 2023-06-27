@@ -16,7 +16,7 @@ const sectorOptions = [
 ];
 
 // eslint-disable-next-line react/prop-types
-export function SectorComponent({ handleRadioChange, selectedSector }) {
+export function Sector({ handleRadioChange, selectedSector }) {
   return (
     <div
       className={`tab-pane fade show`}

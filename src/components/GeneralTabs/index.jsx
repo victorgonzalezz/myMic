@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SectorComponent } from "../SectorComponent/index";
+import { Sector } from "../Sector/index";
 import { TipoDeEmpresa } from "../TipoDeEmpresa/index";
 import { Espacio } from "../Espacio";
 import { Personas } from "../Personas";
@@ -22,7 +22,7 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
     {
       label: "Sector",
       component: (
-        <SectorComponent
+        <Sector
           activeTab={activeTab}
           handleRadioChange={handleRadioChange}
           selectedSector={selectedSector}
