@@ -4,7 +4,7 @@ import "./index.css"
 // eslint-disable-next-line react/prop-types
 export function Home({ handleTabClick, activeTab }) {
   const handleNextTab = () => {
-    if (activeTab === "GeneralTabs") {
+    if (activeTab === "Sector") {
       handleTabClick("Tipo de empresa");
     } else if (activeTab === "Tipo de empresa") {
       handleTabClick("Espacio");
@@ -26,7 +26,7 @@ export function Home({ handleTabClick, activeTab }) {
     } else if (activeTab === "Espacio") {
       handleTabClick("Tipo de empresa");
     } else if (activeTab === "Tipo de empresa") {
-      handleTabClick("GeneralTabs");
+      handleTabClick("Sector");
     }
   };
 
@@ -39,14 +39,13 @@ export function Home({ handleTabClick, activeTab }) {
         <button
           id="volver__button"
           onClick={handlePrevTab}
-          disabled={activeTab === "GeneralTabs"}
+          disabled={activeTab === "Sector"}
         >
           Volver
         </button>
 
         <button
           id="siguiente__button"
-          className="disabled"
           onClick={handleNextTab}
           disabled={activeTab === "Resultados"}
 
