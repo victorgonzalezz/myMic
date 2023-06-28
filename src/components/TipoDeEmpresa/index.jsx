@@ -1,4 +1,8 @@
-export function TipoDeEmpresa({question, answer}) {
+import { useState } from "react";
+
+export function TipoDeEmpresa({ question, answer }) {
+  const [selectedAnswer, setSelectedAnswer] = useState("");
+
   return (
     <div
       className={`tab-pane fade show`}
@@ -13,9 +17,10 @@ export function TipoDeEmpresa({question, answer}) {
             <input
               type="radio"
               id={id}
-              name="drone"
+              name={question}
               value={text}
-              checked
+              checked={selectedAnswer === text}
+              onChange={() => setSelectedAnswer(text)}
             />
             <label htmlFor={id}>{text}</label>
           </div>
@@ -24,9 +29,4 @@ export function TipoDeEmpresa({question, answer}) {
     </div>
   );
 }
-
-      // <div>
-      //   <input type="radio" id="huey" name="drone" value="huey"
-      //         checked />
-      //   <label for="huey">Huey</label>
-      // </div>
+console.log()
