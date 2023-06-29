@@ -11,8 +11,11 @@ import './index.css'
 // eslint-disable-next-line react/prop-types
 export function GeneralTabs({ activeTab, handleTabClick }) {
 
-  
- 
+  const sectorData = data.tabs[0].tab1.content[0];
+  const tipoEmpresaData = data.tabs[0].tab2.content[0];
+  const espacioData = data.tabs[0].tab3.content[0];
+  const personasData = data.tabs[0].tab4.content[0];
+  const productosData = data.tabs[0].tab5.content[0];
 
   const tabs = [
     {
@@ -20,8 +23,8 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
       component: (
         <Sector
           activeTab={activeTab}
-          question={data.tabs[0].tab1.content[0].question}
-          answer={data.tabs[0].tab1.content[0].answer}
+          question={sectorData.question}
+          answer={sectorData.answer}
          
         />
       ),
@@ -31,8 +34,8 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
       component:
         <TipoDeEmpresa
           activeTab={activeTab}
-          question={data.tabs[0].tab2.content[0].question}
-          answer={data.tabs[0].tab2.content[0].answer}
+          question={tipoEmpresaData.question}
+          answer={tipoEmpresaData.answer}
         />,
     },
     {
