@@ -59,7 +59,11 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
     },
     {
       label: "Productos",
-      component: <Productos activeTab={activeTab} />,
+      component:
+        <Productos activeTab={activeTab}
+          question={productosData.question}
+          answer={productosData.answer}
+        />,
     },
     {
       label: "Resultados",

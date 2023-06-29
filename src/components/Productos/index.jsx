@@ -1,5 +1,9 @@
-export function Productos() {
-  
+import { useState } from "react";
+
+export function Productos({ question, answer }) {
+  const [selectedAnswerProductos, setSelectedAnswerProductos] = useState("");
+
+
   return (
     <div
       className={`tab-pane fade show`}
@@ -7,23 +11,21 @@ export function Productos() {
       role="tabpanel"
       aria-labelledby="pills-productos-tab"
     >
-      <p>¿Como te gustaria tener tus productos?</p>
+      <p>{question}</p>
       <fieldset>
-        <div>
-          <input type="radio" id="huey" name="drone" value="huey"
-                checked />
-          <label for="huey">Sofisticados</label>
-        </div>
-
-        <div>
-          <input type="radio" id="dewey" name="drone" value="dewey" />
-          <label for="dewey">Modernos</label>
-        </div>
-
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie" />
-          <label for="louie">Antiguos con agregado valor</label>
-        </div>
+        {answer.map(({ id, text }) => (
+          <div key={id}>
+            <input
+              type="radio"
+              id={id}
+              name={question}
+              value={text}
+              checked={selectedAnswerProductos === text}
+              onChange={() => setSelectedAnswerProductos(text)}
+            />
+            <label htmlFor={id}>{text}</label>
+          </div>
+        ))}
       </fieldset>
     </div>
   );
