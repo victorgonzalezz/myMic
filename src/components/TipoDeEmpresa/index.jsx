@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function TipoDeEmpresa({ question, answer }) {
-  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [selectedAnswerTipoEmpresa, setSelectedAnswerTipoEmpresa] = useState("");
 
   return (
     <div
@@ -19,8 +19,8 @@ export function TipoDeEmpresa({ question, answer }) {
               id={id}
               name={question}
               value={text}
-              checked={selectedAnswer === text}
-              onChange={() => setSelectedAnswer(text)}
+              checked={selectedAnswerTipoEmpresa === text}
+              onChange={() => setSelectedAnswerTipoEmpresa(text)}
             />
             <label htmlFor={id}>{text}</label>
           </div>

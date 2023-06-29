@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 const sectorOptions = [
   { id: "alojamiento", label: "Alojamientos" },
@@ -16,7 +17,9 @@ const sectorOptions = [
 ];
 
 // eslint-disable-next-line react/prop-types
-export function Sector({ handleRadioChange, selectedSector }) {
+export function Sector({ question, answer }) {
+  const [selectedAnswerSector, setSelectedAnswerSector] = useState("");
+
   return (
     <div
       className={`tab-pane fade show`}
@@ -24,26 +27,22 @@ export function Sector({ handleRadioChange, selectedSector }) {
       role="tabpanel"
       aria-labelledby="pills-sector-tab"
     >
-      <p>¿Cuál de los siguientes sectores describe mejor su tipo de negocio?</p>
-
-      <div className="radio__container">
-        {sectorOptions.map((option) => (
-          <div key={option.id}>
+       <p>{question}</p>
+      <fieldset>
+        {answer.map(({ id, text }) => (
+          <div key={id}>
             <input
-              className=""
               type="radio"
-              id={option.id}
-              name="drone"
-              value={option.id}
-              onChange={handleRadioChange}
-              checked={option.id === selectedSector}
+              id={id}
+              name={question}
+              value={text}
+              checked={selectedAnswerSector === text}
+              onChange={() => setSelectedAnswerSector(text)}
             />
-            <label className="radio__container-label" htmlFor={option.id}>
-              {option.label}
-            </label>
+            <label htmlFor={id}>{text}</label>
           </div>
         ))}
-      </div>
+      </fieldset>
     </div>
   );
 }
