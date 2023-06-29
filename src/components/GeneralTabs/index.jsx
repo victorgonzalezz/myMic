@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Sector } from "../Sector/index";
 import { TipoDeEmpresa } from "../TipoDeEmpresa/index";
 import { Espacio } from "../Espacio";
@@ -11,12 +10,9 @@ import './index.css'
 
 // eslint-disable-next-line react/prop-types
 export function GeneralTabs({ activeTab, handleTabClick }) {
-  const [selectedSector, setSelectedSector] = useState("");
 
   
-  const handleRadioChange = (event) => {
-    setSelectedSector(event.target.value);
-  };
+ 
 
   const tabs = [
     {
@@ -24,8 +20,8 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
       component: (
         <Sector
           activeTab={activeTab}
-          handleRadioChange={handleRadioChange}
-          selectedSector={selectedSector}
+          question={data.tabs[0].tab1.content[0].question}
+          answer={data.tabs[0].tab1.content[0].answer}
          
         />
       ),
