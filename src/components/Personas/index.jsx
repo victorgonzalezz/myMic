@@ -1,4 +1,8 @@
-export function Personas() {
+import { useState } from "react";
+
+export function Personas({ question, answer }) {
+  const [selectedAnswerPersonas, setSelectedAnswerPersonas] = useState("");
+
   return (
     <div
       className={`tab-pane fade show`}
@@ -6,23 +10,21 @@ export function Personas() {
       role="tabpanel"
       aria-labelledby="pills-personas-tab"
     >
-      <p>¿Con quantas personas te gustaria estar?</p>
+      <p>{question}</p>
       <fieldset>
-        <div>
-          <input type="radio" id="huey" name="drone" value="huey"
-                checked />
-          <label for="huey">Poca gente</label>
-        </div>
-
-        <div>
-          <input type="radio" id="dewey" name="drone" value="dewey" />
-          <label for="dewey">Alguna gente</label>
-        </div>
-
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie" />
-          <label for="louie">Mucha gente</label>
-        </div>
+        {answer.map(({ id, text }) => (
+          <div key={id}>
+            <input
+              type="radio"
+              id={id}
+              name={question}
+              value={text}
+              checked={selectedAnswerPersonas === text}
+              onChange={() => setSelectedAnswerPersonas(text)}
+            />
+            <label htmlFor={id}>{text}</label>
+          </div>
+        ))}
       </fieldset>
     </div>
   );
