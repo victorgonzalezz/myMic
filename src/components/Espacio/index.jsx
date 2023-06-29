@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export function Espacio({ question, answer }) {
-   const [selectedAnswerEspacio, setSelectedAnswerEspacio] = useState("");
+  const [selectedAnswerEspacio, setSelectedAnswerEspacio] = useState('')
   return (
     <div
       className={`tab-pane fade show`}
@@ -26,5 +26,5 @@ export function Espacio({ question, answer }) {
         ))}
       </fieldset>
     </div>
-  );
+  )
 }

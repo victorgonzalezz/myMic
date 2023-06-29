@@ -8,5 +8,5 @@ export function Resultados() {
     >
       <p>¿Cuál tipo de negocio describe su empresa?</p>
     </div>
-  );
+  )
 }

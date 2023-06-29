@@ -1,5 +1,4 @@
-import "./index.css"
-
+import './index.css'
 
 export function Header() {
   return (
@@ -8,5 +7,5 @@ export function Header() {
         <img src="/src/assets/micLogo.jpg" alt="EAS" />
       </div>
     </>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export function TipoDeEmpresa({ question, answer }) {
-  const [selectedAnswerTipoEmpresa, setSelectedAnswerTipoEmpresa] = useState("");
+  const [selectedAnswerTipoEmpresa, setSelectedAnswerTipoEmpresa] = useState('')
 
   return (
     <div
@@ -27,6 +27,5 @@ export function TipoDeEmpresa({ question, answer }) {
         ))}
       </fieldset>
     </div>
-  );
+  )
 }
-console.log()

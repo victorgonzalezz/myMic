@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export function Productos({ question, answer }) {
-  const [selectedAnswerProductos, setSelectedAnswerProductos] = useState("");
-
+  const [selectedAnswerProductos, setSelectedAnswerProductos] = useState('')
 
   return (
     <div
@@ -28,5 +27,5 @@ export function Productos({ question, answer }) {
         ))}
       </fieldset>
     </div>
-  );
+  )
 }
