@@ -1,4 +1,7 @@
-export function Espacio() {
+import { useState } from "react";
+
+export function Espacio({ question, answer }) {
+   const [selectedAnswerEspacio, setSelectedAnswerEspacio] = useState("");
   return (
     <div
       className={`tab-pane fade show`}
@@ -6,23 +9,21 @@ export function Espacio() {
       role="tabpanel"
       aria-labelledby="pills-espacio-tab"
     >
-      <p>¿Como te gustaria tener tu espacio?</p>
+      <p>{question}</p>
       <fieldset>
-        <div>
-          <input type="radio" id="huey" name="drone" value="huey"
-                checked />
-          <label for="huey">Pequeño</label>
-        </div>
-
-        <div>
-          <input type="radio" id="dewey" name="drone" value="dewey" />
-          <label for="dewey">Medio</label>
-        </div>
-
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie" />
-          <label for="louie">Grande</label>
-        </div>
+        {answer.map(({ id, text }) => (
+          <div key={id}>
+            <input
+              type="radio"
+              id={id}
+              name={question}
+              value={text}
+              checked={selectedAnswerEspacio === text}
+              onChange={() => setSelectedAnswerEspacio(text)}
+            />
+            <label htmlFor={id}>{text}</label>
+          </div>
+        ))}
       </fieldset>
     </div>
   );

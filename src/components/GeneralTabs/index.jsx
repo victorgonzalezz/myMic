@@ -40,7 +40,12 @@ export function GeneralTabs({ activeTab, handleTabClick }) {
     },
     {
       label: "Espacio",
-      component: <Espacio activeTab={activeTab} />,
+      component:
+        <Espacio
+          activeTab={activeTab}
+          question={espacioData.question}
+          answer={espacioData.answer}
+        />,
     },
     {
       label: "Personas",
